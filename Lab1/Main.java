@@ -23,6 +23,10 @@ public class Main {
             task3.startTask();
         } catch (IllegalArgumentException exept) {
             exept.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException exept) {
+            exept.printStackTrace();
+        } catch (NullPointerException exept) {
+            exept.printStackTrace();
         }
     }
 }

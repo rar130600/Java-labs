@@ -9,7 +9,7 @@ public final class Task3 implements InterfaceTask3 {
     private static Scanner scanner = new Scanner(new InputStreamReader(System.in));
 
     @Override
-    public void startTask() throws IllegalArgumentException {
+    public void startTask() throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException {
         System.out.println("Available commands:");
         System.out.println("\"add\" to add new book");
         System.out.println("\"updateByIndex\" to update book by index");
@@ -26,7 +26,7 @@ public final class Task3 implements InterfaceTask3 {
 
     }
 
-    private void startMenu() {
+    private void startMenu() throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException {
         BookList bookList = new BookList();
 
         while (true) {
