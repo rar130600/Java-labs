@@ -56,7 +56,7 @@ public final class Task3 implements InterfaceTask3 {
 
                 case "findById":
                     System.out.println("Type book's id to print: ");
-                    int indexFindId = scanner.nextInt();
+                    String indexFindId = scanner.next();
                     BookList booksById = new BookList(bookList.getById(indexFindId));
                     booksById.printAll();
                     break;
@@ -103,7 +103,7 @@ public final class Task3 implements InterfaceTask3 {
         System.out.println("Insert a book:");
 
         System.out.print("Id: ");
-        int id = scanner.nextInt();
+        String id = scanner.next();
 
         System.out.print("Author: ");
         String author = scanner.next();

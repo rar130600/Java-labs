@@ -3,10 +3,7 @@ package tasks;
 import javax.naming.Name;
 
 public final class Book {
-    public Book(int id, String author, String name, int date) {
-        if (id < 0) {
-            throw new IllegalArgumentException("Id is negative");
-        }
+    public Book(String id, String author, String name, int date) {
         if (date < 0) {
             throw new IllegalArgumentException("Date is negative");
         }
@@ -17,7 +14,7 @@ public final class Book {
         this.date = date;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -38,7 +35,7 @@ public final class Book {
         return "Book: " + id + " " + author + " " + name + " " + date;
     }
 
-    private int id;
+    private String id;
     private String author;
     private String name;
     private int date;

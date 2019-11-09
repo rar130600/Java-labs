@@ -47,11 +47,11 @@ public final class BookList {
         return list.get(index);
     }
 
-    public ArrayList<Book> getById(int id) {
+    public ArrayList<Book> getById(String id) {
         ArrayList<Book> result = new ArrayList<Book>();
 
         for (Book i : list) {
-            if (i.getId() == id) {
+            if (i.getId().equals(id)) {
                 result.add(i);
             }
         }
