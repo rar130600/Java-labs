@@ -3,13 +3,15 @@ package tasks;
 import interfaceTasks.InterfaceTask3;
 
 import java.io.InputStreamReader;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public final class Task3 implements InterfaceTask3 {
     private static Scanner scanner = new Scanner(new InputStreamReader(System.in));
 
     @Override
-    public void startTask() throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException {
+    public void startTask()
+            throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException, InputMismatchException {
         System.out.println("Available commands:");
         System.out.println("\"add\" to add new book");
         System.out.println("\"updateByIndex\" to update book by index");
@@ -26,7 +28,8 @@ public final class Task3 implements InterfaceTask3 {
 
     }
 
-    private void startMenu() throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException {
+    private void startMenu()
+            throws IllegalArgumentException, ArrayIndexOutOfBoundsException, NullPointerException, InputMismatchException {
         BookList bookList = new BookList();
 
         while (true) {
@@ -99,7 +102,7 @@ public final class Task3 implements InterfaceTask3 {
         return scanner.next();
     }
 
-    private Book readBook() {
+    private Book readBook() throws InputMismatchException {
         System.out.println("Insert a book:");
 
         System.out.print("Id: ");

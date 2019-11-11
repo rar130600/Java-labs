@@ -5,6 +5,8 @@ import tasks.Task1;
 import tasks.Task2;
 import tasks.Task3;
 
+import java.util.InputMismatchException;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task1:");
@@ -21,12 +23,14 @@ public class Main {
         InterfaceTask3 task3 = new Task3();
         try {
             task3.startTask();
-        } catch (IllegalArgumentException exept) {
-            exept.printStackTrace();
-        } catch (ArrayIndexOutOfBoundsException exept) {
-            exept.printStackTrace();
-        } catch (NullPointerException exept) {
-            exept.printStackTrace();
+        } catch (IllegalArgumentException except) {
+            except.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException except) {
+            except.printStackTrace();
+        } catch (NullPointerException except) {
+            except.printStackTrace();
+        } catch (InputMismatchException except) {
+            except.printStackTrace();
         }
     }
 }
