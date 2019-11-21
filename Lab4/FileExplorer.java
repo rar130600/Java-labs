@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.function.Consumer;
 
 public class FileExplorer {
-    private Path currentPath = Paths.get("/home/rar130600/my/test/").toAbsolutePath();
+    private Path currentPath = Paths.get("").toAbsolutePath();
     private final HashMap<String, Consumer<String>> commandMap = new HashMap<>() {{
         put("cd", FileExplorer.this::goToDirectory);
         put("ls", FileExplorer.this::listDirectory);
