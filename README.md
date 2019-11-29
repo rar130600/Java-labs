@@ -2,17 +2,17 @@
 3530904/80002
 Рахматуллин Александр
 
-🌒 Lab_1: ?
+🌕 Lab_1: Completed
 
 🌕 Lab_2: Completed
 
 🌕 Lab_3: Completed
 
-🌓 Lab_4: Awaiting verification
+🌕 Lab_4: Completed
 
-🌓 Lab_5: Awaiting verification
+🌕 Lab_5: Completed
 
-🌓 Lab_6: Awaiting verification
+🌕 Lab_6: Completed
 
 🌑 Lab_7: In progress...
 
