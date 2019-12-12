@@ -14,7 +14,7 @@
 
 🌕 Lab_6: Completed
 
-🌑 Lab_7: In progress...
+🌓 Lab_7: awaiting verification
 
 # Lab tasks:
 ### Lab 1: 
