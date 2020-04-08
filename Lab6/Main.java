@@ -1,4 +1,4 @@
-import BankStructure.*;
+import bankStructure.*;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,15 +16,15 @@ public class Main {
 
             System.out.println("===Synchronized===");
             Bank bankSynchronized = new BankSynchronized(BANK_ACCOUNT_COUNT, BANK_START_BALANCE);
-            bankSynchronized.readTransactionsFromFile(BANK_DATA_FILE_NAME);
-            bankSynchronized.runTransactions();
+            bankSynchronized.readTransactionsFromFile(BANK_DATA_FILE_NAME, System.out);
+            bankSynchronized.runTransactions(System.out);
             bankSynchronized.getMapAccount().forEach((key, value) -> System.out.println(key + ": " + value.getBalance()));
             System.out.println();
 
             System.out.println("===Concurrent===");
             Bank bankConcurrent = new BankConcurrent(BANK_ACCOUNT_COUNT, BANK_START_BALANCE);
-            bankConcurrent.readTransactionsFromFile(BANK_DATA_FILE_NAME);
-            bankConcurrent.runTransactions();
+            bankConcurrent.readTransactionsFromFile(BANK_DATA_FILE_NAME, System.out);
+            bankConcurrent.runTransactions(System.out);
             bankConcurrent.getMapAccount().forEach((key, value) -> System.out.println(key + ": " + value.getBalance()));
 
         } catch (FileNotFoundException except) {
